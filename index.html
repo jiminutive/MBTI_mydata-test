@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="ko" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="@jiminutive_">
+  <meta name="keywords" content="마이데이터 MBTI 테스트">
+  <meta name="description" content="마이데이터 MBTI 테스트">
+
+  <!--sns share-->
+  <meta property="og:url" content="https://mydata-test.netlify.app" />
+  <meta property="og:title" content="마이데이터 MBTI 테스트" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="img/shareImage.png" />
+  <meta property="og:description" content="마이데이터 MBTI 테스트 같이 해보실래요?" />
+
+  <meta name='twitter:title', content= '마이데이터 MBTI 테스트'/>
+  <meta name='twitter:description', content= '마이데이터 MBTI 테스트 같이 해보실래요?'/>
+  <meta name='twitter:url', content= 'https://mydata-test.netlify.app'/>
+  <meta name='twitter:image', content= 'img/shareImage.png'/>
+
+  <!--favicon-->
+  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="img/favicon.png" />
+
+  <title>마이데이터 MBTI 테스트</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/default.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/qna.css">
+  <link rel="stylesheet" s href="./css/animation.css">
+  <link rel="stylesheet" href="./css/result.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  <script>
+    Kakao.init('dd86e3f277c1f446de6a10b714dec8f2');
+    Kakao.isInitialized();
+  </script>
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-205738910-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-205738910-1');
+  </script>
+
+</head>
+
+<body>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v11.0&appId=205127291673805&autoLogAppEvents=1" nonce="yX7yZ0dm"></script>
+
+  <div class="container">
+    <section id="main" class="mx-auto my-3 py-3 px-0">
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+        <br>
+        <img src="./img/main.png" alt="mainImage" class="img-fluid" width="400" height="400">
+
+      </div>
+
+      <br><br>
+
+      <input type="image" onclick="js:begin()" name="<startButton>" src="./img/startbutton.png" border="0" alt="startButton" class="btn img-fluid" width="160" height="160">
+      <p style="font-size:13px;"><br><br>본 테스트는 전문적인 설계가 아닌<br>재미 및 흥미유발 목적으로 제작되었습니다.</p>
+      <p style="font-size:9px;"><br><br>Copyright ⓒ 2021.<br>경기도 & 한국데이터산업진흥원.<br>All Rights Reserved.<br><br><br></p>
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+        <!--<img src="./img/copyright.png" alt="copyrightImage" class="img-fluid" width="180" height="180">-->
+      </div>
+    </section>
+    <section id="qna">
+      <div class="status mx-auto mt-5">
+        <div class="statusBar">
+
+        </div>
+
+      </div>
+      <div class="qBox my-5 py-3 mx-auto">
+
+      </div>
+      <div class="answerBox">
+
+      </div>
+
+    </section>
+    <section id="result" class="mx-auto my-5 py-3 px-3">
+      <h3> </h3>
+      <div class="resultname">
+
+      </div>
+      <div id="resultImg" class="my-3 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+
+      </div>
+      <div id="matchImg" class="my-3 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+
+      </div>
+      <div class="resultDesc">
+
+      </div>
+
+      <script type="text/javascript">
+      function moveHome(){
+        location.href="/index.html";
+      }
+      </script>
+      <br>
+      <!--<button type="button" class="kakao mt-3 py-2 px-3" onclick="js:setShare()" style="font-size:13px;">카카오톡</button>
+      <button type="button" class="fb mt-3 py-2 px-3" onclick="js:fbShare()" style="font-size:13px;">페이스북</button>-->
+      <!--<a id="btnKakao" class="link-icon kakao" href="javascript:setShare();">카카오톡</a>
+      <a id="btnTwitter" class="link-icon twitter" href="javascript:shareTwitter();">트위터</a>
+      <a id="btnFacebook" class="link-icon facebook" href="javascript:shareFacebook();">페이스북</a>-->
+      <input type="image" onclick="js:setShare()" name="<kakaoShare>" src="./img/icon-kakao.png" border="0" alt="kakaoShare" class="btn img-fluid" width="45" height="45">
+      <input type="image" onclick="js:shareTwitter()" name="<twitterShare>" src="./img/icon-twitter.png" border="0" alt="twitterShare" class="btn img-fluid" width="45" height="45">
+      <input type="image" onclick="js:shareFacebook()" name="<fbShare>" src="./img/icon-facebook.png" border="0" alt="fbShare" class="btn img-fluid" width="45" height="45">
+      <br>
+      <button type="button" class="gohome mt-3 py-2 px-3" onclick="js:moveHome()">다시하기</button>
+      <!--<a href="https://mydatatest.creatorlink.net" class="allmatch py-2 px-3" style="font-size:13px;">전체유형 확인하기</a>-->
+      <button type="button" class="download mt-3 py-2 px-3" onclick="js:download()">결과 다운로드</button>
+      <br>
+        <button type="button" class="dsif mt-3 py-2 px-3" onclick="window.open('https://dsif2021.com/') ">데이터 주권<br>국제포럼</button>
+        <button type="button" class="blog mt-3 py-2 px-3" onclick="window.open('https://blog.naver.com/kmydata') ">마이데이터<br>블로그</button>
+      <br>
+      <p style="font-size:7px;"><br><br>Copyright ⓒ 2021. 경기도 & 한국데이터산업진흥원.<br>All Rights Reserved.</p>
+    </section>
+    <script src="./js/data.js" charset="utf-8"></script>
+    <script src="./js/start.js" charset="utf-8"></script>
+    <script scr="./js/share.js" charset="utf-8"></script>
+  </div>
+</body>
+
+</html>
